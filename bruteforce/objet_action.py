@@ -1,10 +1,12 @@
 class action:
     def __init__(self,
+                 numero = 0,
                  nom = "",
                  montant = 0,
                  benefice = 0,
                  utilisee = False,
                  boucle_utilisee = 0):
+        self.numero = numero
         self.nom = nom
         self.montant = montant
         self.benefice = self.calcul_benefice(benefice)
