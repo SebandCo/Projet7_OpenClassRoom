@@ -89,7 +89,7 @@ def creation (simul_precedente):
     return simulation
 
 # Début du programme
-print (f"Début de l'analyse des {len(liste_action)-1} actions")
+print (f"Début de l'analyse des {len(liste_action)-1} actions\n")
 
 # Boucle de départ
 for action_actuelle in liste_action:
@@ -99,7 +99,7 @@ for action_actuelle in liste_action:
                   numero_possibilite)
 
 # Premier compte-rendu
-print (f"Il y a {numero_possibilite-1} combinaisons d'action possible")
+print (f"Il y a {numero_possibilite-1} combinaisons d'action possible\n")
 
 for possibilites in simulation:
     # Rajout du montant de l'action au montant provisoire
@@ -120,8 +120,8 @@ for possibilites in simulation:
     montant_provisoire = 0
 
 # Deuxième compte-rendu
-print (f"Sur les {numero_possibilite - 1} combinaison possible"
-       f"Seules {numero_possible - 1} sont conforme avec la limite de {montant_maximum} euros")
+print (f"Sur les {numero_possibilite - 1} combinaison possible\n"
+       f"Seules {numero_possible - 1} sont conforme avec la limite de {montant_maximum} euros\n")
 
 # Analyse du benefice attendu
 meilleur_valeur = 0
@@ -142,10 +142,11 @@ for action_possible in simulation_valide:
             meilleur_montant_base = simulation_valide[action_possible].montant
 
 # Compte-rendu final
-print (f"Le meilleur montage possible est la numéro {meilleur_valeur}"
-       f"Le benefice attendu est de {simulation_valide[meilleur_valeur].benefice} euros"
-       f"Pour un investissement de départ de {simulation_valide[meilleur_valeur].montant} euros"
-       f"Il faudra utiliser les actions {simulation_valide[meilleur_valeur].liste_action}")
+print (f"Le meilleur montage possible est la numéro {meilleur_valeur}\n"
+       f"Le benefice attendu est de {simulation_valide[meilleur_valeur].benefice} euros\n"
+       f"Pour un investissement de départ de {simulation_valide[meilleur_valeur].montant} euros\n"
+       f"Il faudra utiliser les actions :")
+simulation_valide[meilleur_valeur].impression_liste_action()
 
 
 print("fin du programme")

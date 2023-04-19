@@ -21,3 +21,7 @@ class possibilite:
         self.montant = montant
         self.liste_action = liste_action
         self.benefice = benefice
+    
+    def impression_liste_action(self):
+        for action in self.liste_action:
+            print (action.nom)
