@@ -126,14 +126,26 @@ print (f"Sur les {numero_possibilite - 1} combinaison possible"
 # Analyse du benefice attendu
 meilleur_valeur = 0
 meilleur_benefice = 0
+meilleur_montant_base = 0
 
 # Recherche du meilleur bénéfice
 for action_possible in simulation_valide:
     # Si deux bénéfices sont équivalent, recherche le plus petit investissement
     if simulation_valide[action_possible].benefice == meilleur_benefice:
-        if simulation_valide[action_possible].
+        if simulation_valide[action_possible].montant < meilleur_montant_base:
+            meilleur_valeur = action_possible
+            meilleur_benefice = simulation_valide[action_possible].benefice
+            meilleur_montant_base = simulation_valide[action_possible].montant
+    elif  simulation_valide[action_possible].benefice > meilleur_benefice:
+            meilleur_valeur = action_possible
+            meilleur_benefice = simulation_valide[action_possible].benefice
+            meilleur_montant_base = simulation_valide[action_possible].montant
 
-
+# Compte-rendu final
+print (f"Le meilleur montage possible est la numéro {meilleur_valeur}"
+       f"Le benefice attendu est de {simulation_valide[meilleur_valeur].benefice} euros"
+       f"Pour un investissement de départ de {simulation_valide[meilleur_valeur].montant} euros"
+       f"Il faudra utiliser les actions {simulation_valide[meilleur_valeur].liste_action}")
 
 
 print("fin du programme")
