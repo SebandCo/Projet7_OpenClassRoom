@@ -12,7 +12,7 @@ dico_provisoire = {}
 
 # Définition des différentes actions
 # 1er étape : récupération du fichier CSV
-with open('Liste_action.csv', mode='r', encoding='utf-8') as fichier_csv:
+with open('dataset1.csv', mode='r', encoding='utf-8') as fichier_csv:
     lecteur_csv = csv.reader(fichier_csv, delimiter=';')
     i = 0
     # 2eme étape : Lecture du fichier csv
@@ -24,15 +24,18 @@ with open('Liste_action.csv', mode='r', encoding='utf-8') as fichier_csv:
             # 3eme étape : Création de l'objet action dans un dictionnaire
             dico_provisoire["action{}".format(i)] = action(i,
                                                            provisoire[0],
-                                                           float(provisoire[1]),
-                                                           float(provisoire[2]))
-            # 4eme étape : Mise de l'objet dans une liste
+                                                           provisoire[1],
+                                                           provisoire[2])
+            # 4eme étape : Récupération des benefices
             liste_action.append(dico_provisoire["action{}".format(i)])
         i += 1
+
+
 
 # Définition des paramètres de base
 numero_possibilite = 1
 simulation = {}
+
 
 # Définition des paramètres montant
 montant_provisoire = 0
@@ -131,7 +134,7 @@ for action_possible in simulation_valide:
 # Compte-rendu final
 print(f"Le meilleur montage possible est la numéro {meilleur_valeur}\n"
       f"Le benefice attendu est de {simulation_valide[meilleur_valeur].benefice} euros\n"
-      f"Pour un investissement de départ de {simulation_valide[meilleur_valeur].montant} euros\n\n"
+      f"Pour un investissement de départ de {simulation_valide[meilleur_valeur].montant} euros\n"
       f"Il faudra utiliser les actions :")
 simulation_valide[meilleur_valeur].impression_liste_action()
 
