@@ -39,4 +39,4 @@ class possibilite:
     
     def impression_liste_action(self):
         for action in self.liste_action:
-            print(action.nom)
+            print(action)
