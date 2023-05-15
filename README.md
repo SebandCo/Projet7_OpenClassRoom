@@ -17,7 +17,7 @@ Le programme étant assez court, aucun patern n'a été mis en place
 ## Pré-requis
 Dans un environnement dédié installer les packages
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Lancement du programme
