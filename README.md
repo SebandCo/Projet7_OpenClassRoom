@@ -10,7 +10,7 @@ Deux programmes distincts dans ce fichier
 - Une solution optimisée avec deux jeux de données de 1000 références chacun
     - Ne garde que les actions avec le meilleur rendement
 
-Le programme est construit en Python et utilise l'orienté objet pour l'enregistrement des données
+Le programme est construit en Python et utilise l'orientée objet pour l'enregistrement des données
 Le programme étant assez court, aucun patern n'a été mis en place
 
 # Installation
@@ -25,10 +25,10 @@ Le programme se lance grâce à la commande
 ```
 python main.py
 ```
-Il suffit de placer dans le dossier bruteforce ou optimized pour lancer le programme spécifié
+Il suffit de se placer dans le dossier bruteforce ou optimized pour lancer le programme spécifié
 
 # Choix du dossier pour la solution optimized
-En allant directement dans un éditeur de code, modifier la ligne 20 ou 21 suivant le fichier souhaité
+En allant directement dans un éditeur de code, modifier la ligne 20 ou 21 suivant le fichier a analyser
 
 # Contribution
 Commençant en programmation Python et en algorithme, je suis preneur :
