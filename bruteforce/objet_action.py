@@ -24,19 +24,19 @@ class possibilite:
         self.benefice = self.calcul_benefice(benefice)
 
     def calcul_montant(self, montant):
-        # Si le montant est de 0, alors on le calcul 
+        # Si le montant est de 0, alors on le calcul
         if montant == 0:
             for action in self.liste_action:
                 montant += action.montant
         return (montant)
 
     def calcul_benefice(self, benefice):
-        # Si le benefice est de 0, alors on le calcul 
+        # Si le benefice est de 0, alors on le calcul
         if benefice == 0:
             for action in self.liste_action:
                 benefice += action.benefice
         return (benefice)
-    
+
     def impression_liste_action(self):
         for action in self.liste_action:
-            print(action)
+            print(action.nom)
